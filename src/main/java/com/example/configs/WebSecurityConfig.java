@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-import java.util.Arrays;
 
 /**
  * Created by zy on 12/03/2017.
@@ -24,7 +23,7 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
                 .csrf().disable() // oauth server 不需要 csrf 防护
                 .authorizeRequests()
                 .antMatchers("/public/**").permitAll() // public 路径不需要认证即可访问
-                .anyRequest().authenticated() //其他页面都不能访问
+                .anyRequest().authenticated() //其他页面都需要登录后访问
                 .and()
                 .httpBasic().disable(); // 禁止 basic 认证
     }
