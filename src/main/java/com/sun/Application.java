@@ -1,12 +1,12 @@
-package com.example;
+package com.sun;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Oauth2demoApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Oauth2demoApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }

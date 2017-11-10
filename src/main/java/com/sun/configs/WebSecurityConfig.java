@@ -1,18 +1,15 @@
-package com.example.configs;
-
+package com.sun.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-
 /**
- * Created by zy on 12/03/2017.
+ * Created by wayne on 12/03/2017.
  */
 @Configuration
 public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
@@ -32,8 +29,8 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("username1")
-                .password("password1")
+                .withUser("root")
+                .password("123456")
                 .roles("USERS");
     }
 
